@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
+
+/* img{
+    width:318px;
+    height: 472px;
+} */
+/* img :hover{
+    border: 1px sold black;
+} */
+
+/* .list-img{
+    width: 100%;
+    height: 472px;
+    margin-left: 1%;
+}
+
+.list-img:hover{
+    border: 1px solid green;
+    box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+} */
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color:white;
+    opacity: 0.7;
+}
+.login-div{
+    /* background-image: url(assets/books-reading-library.jpg); */
+    margin-top: 8%;
+}
+
+.list-div{
+    /* width: 22%; */
+    /* margin-left: 1%;
+     */
+    /* height:800px; */
+    float: left;
+    margin:1%;
+    width: 31%;
+    /* border:1px solid green; */
+}
+.list-div:hover{
+    box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+}
+.list-div img{
+    height:400px;
+}
+.list-div img:hover{
+    /* height:401px; */
+    cursor: pointer;
+}
+.admin-home-div{
+    width: 100%;
+    text-align: center;
+}
+.admin-home-img{
+    width: 90%;
+    height:300px;
+}
+
+.ind-comp-img{
+    width: 30%;
+    height:auto;
+}
+.drop-btn{
+    display: none;
+}
+
+/* .dropdown-list{
+    display: none;
+} */
+.dropdown-list a{
+    display: block;
+}
+.drop-btn:hover .dropdown-list{
+    display: block;
+}
+.card-footer button{
+    margin-right: 2%;
+}
+.customer-btns button{
+    margin-right: 2%;
+}
+/* .add-div{
+    width:100%;
+} */
+/* .add-div button{
+    float: right;
+} */
+
+/* .my-list-div{
+
+} */
+/* .my-list-div:hover{
+    box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+} */

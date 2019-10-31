@@ -1,0 +1,42 @@
+<!-- <p>
+  authors works!
+</p> -->
+<!-- <div *ngIf="authors">
+  {{authors|json}}
+</div> -->
+<div>
+    <button class="btn btn-success" (click)="addAuthor()">+Add Author</button>
+</div>
+<div *ngIf="authors" class=" container-fluid">
+       
+        <div>
+                <ng-container *ngFor="let author of authors">
+                        <div class="card list-div">
+                            <div class="card-header">
+                              <img  class="img-thumbnail" (click)="onClick(author)"  src="{{author.imageurl}}">
+                              <!-- <img  class="img-thumbnail" (click)="onClick(author)" > -->
+                            </div>
+                            <div class="card-body">
+                                <p class="text-info">Author Name : {{author.name}}</p>
+                                <p class="text-info">Author Id : {{author.id}}</p>
+                                <ng-container *ngIf="author.bookslist">
+                                        <p class="text-info">Books :</p>
+                                    <ul class="text-info">
+                                        <li *ngFor="let book of author.bookslist">{{book.name}}</li>
+                                    </ul>
+                                </ng-container>
+                                <p class="text-info">Profession : {{author.profession}}</p>
+                                <p class="text-info">Address : {{author.address}}</p>
+                            </div> 
+                            <div class="card-footer">
+                                <button class="btn btn-info" (click)="onClick(author)">Edit</button>
+                                <button class="btn btn-danger" (click)="onDelete(author)">-Delete Author</button>
+                            </div>
+                        </div>
+                        
+                      </ng-container>
+        </div>
+   
+
+
+</div>

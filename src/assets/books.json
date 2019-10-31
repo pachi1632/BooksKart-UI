@@ -1,0 +1,44 @@
+[
+        {
+            "id":"1",
+            "name":"Algorithms To Live By",
+            "releasedOn":"April 19, 2016",
+            "authorId":"1",
+            "imgurl":"assets/algorithmsToLiveBy.jpg"
+        },
+        {
+            "id":"2",
+            "name":"The Most Human Human",
+            "releasedOn":"Mar 18, 2011",
+            "authorId":"1",
+            "imgurl":"assets/theMostHumanHuman.jpg"
+        },
+        {
+            "id":"3",
+            "name":"The Art of Happiness",
+            "releasedOn":"April 19, 2016",
+            "authorId":"1",
+            "imgurl":"assets/The_art_of_happiness.jpg"
+        },
+        {
+            "id":"4",
+            "name":"The Power of Myth",
+            "releasedOn":"Mar 18, 2011",
+            "authorId":"1",
+            "imgurl":"assets/The_Power_of_Myth.jpg"
+        },
+        {
+            "id":"5",
+            "name":"Moby Dick",
+            "releasedOn":"April 19, 2016",
+            "authorId":"1",
+            "imgurl":"assets/moby_dick.jpg"
+        },
+        {
+            "id":"6",
+            "name":"Rooster Bar",
+            "releasedOn":"Mar 18, 2011",
+            "authorId":"1",
+            "imgurl":"assets/roosterbar.jpg"
+        }
+    ]

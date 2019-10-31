@@ -1,0 +1,24 @@
+
+<div class="container">
+    <form [formGroup]="form">
+        <div class="form-group">
+          <label>Book Id</label>
+          <input type="text" class="form-control" formControlName="id" placeholder="Enter Book ID">
+        </div>
+        <div class="form-group">
+            <label>Book Name</label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter Book Name">
+        </div>
+       <div class="form-group">
+              <label>Released on</label>
+              <input type="text" class="form-control" formControlName="releasedOn" placeholder="Enter Release Date">
+        </div>
+        <!-- <div class="form-group">
+                <label>Author Id</label>
+                <input type="text" class="form-control" formControlName="authorId" placeholder="Enter Author ID">
+         </div> -->
+         <button class="btn btn-warning" [disabled]="form.invalid" (click)="onSubmit(form)" >Submit</button>
+         <input type="hidden">
+          
+      </form>
+</div>

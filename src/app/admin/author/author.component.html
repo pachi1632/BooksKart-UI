@@ -1,0 +1,69 @@
+<div *ngIf="author" class="container">
+  <div>
+    <img class="img-thumbnail ind-comp-img" src="{{imgurl}}">
+  </div>
+  <form #authorForm="ngForm" (ngSubmit)=addAuthers(authorForm.value)>
+    <div class="form-group">
+      <label>Author Id</label>
+      <input type="text" class="form-control" [(ngModel)]="author.id" name="id" disabled>
+    </div>
+    <div class="form-group">
+      <label>Author Name</label>
+      <input type="text" class="form-control" [(ngModel)]="author.name" name="name">
+    </div>
+    <div class="form-group">
+      <label>Books List</label>
+      
+      <angular2-multiselect [data]="dropdownList" class="form-control" [(ngModel)]="author.bookslist" name="bookslist" [settings]="dropdownSettings"
+        (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)">
+      </angular2-multiselect>
+    </div>
+    <div class="form-group">
+      <label>Address</label>
+      <input type="text" class="form-control" [(ngModel)]="author.address" name="address">
+    </div>
+    <div class="form-group">
+      <label>Profession</label>
+      <input type="text" class="form-control" [(ngModel)]="author.profession" name="profession">
+    </div>
+    <button type="submit" class="btn btn-warning" >Submit</button>
+  </form>
+
+<!-- 
+  <form [formGroup]="form">
+    <div class="form-group">
+      <label>Author Id</label>
+      <input type="text" class="form-control" formControlName="id">
+    </div>
+    <div class="form-group">
+      <label>Author Name</label>
+      <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label>Books List</label>
+      <angular2-multiselect [data]="dropdownList" class="form-control" formControlName="selectedItems" [settings]="dropdownSettings"
+        (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)">
+      </angular2-multiselect>
+    </div>
+    <div class="form-group">
+      <label>Address</label>
+      <input type="text" class="form-control" formControlName="address">
+    </div>
+    <div class="form-group">
+      <label>Profession</label>
+      <input type="text" class="form-control" formControlName="profession">
+    </div>
+    <button class="btn btn-warning" (click)="onSubmit(form)">Submit</button>
+
+  </form> -->
+  <!-- <select name="Country" multiple size="2" title="choose" data-selected-text-format="count" class="selectpicker">
+    <option value="USA">USA</option>
+    <option value="Russia">Russia</option>
+    <option value="India">India</option>
+    <option value="Britain">Britain</option>
+  </select> -->
+  <!-- {{books.book[id-1].name}}
+  <ng-container *ngFor="let book of books.book">
+    {{book.name}}<br>
+  </ng-container>  -->
+</div>

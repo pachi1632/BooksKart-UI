@@ -1,0 +1,44 @@
+<!-- <p>
+  customers works!
+</p> -->
+<button class="btn btn-success" (click)="addCustomer()">+Add Customer</button>
+<div *ngIf="customers">
+    
+  <table class="table  table-hover">
+      <thead>
+        <tr>
+          <th>Customerid</th>
+          <th>Name</th>
+          <th>Address</th>
+          <!-- <th>Authors List</th> -->
+          <th>Books List</th>
+          <th>
+            <button class="btn btn-success" (click)="addCustomer()">+Add Customer</button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+       
+        <ng-container *ngFor="let customer of customers">
+            <tr >
+                <td>{{customer.customerid}}</td>
+                <td>{{customer.name}}</td>
+                <td>{{customer.address}}</td>
+                <!-- <td>{{customer.authorslist}}</td> -->
+                <td>
+                  <ng-container *ngFor="let customer of customer.list">
+                     {{customer.itemName}}, 
+                  </ng-container>
+                </td>
+                <td>
+                    <div class="customer-btns">
+                  <button class="btn btn-warning" (click)="onClick(customer)" >Edit</button>
+                  <button class="btn btn-danger" (click)="onDelete(customer)">Delete Customer</button>
+                </div>
+                </td>
+              </tr>
+        </ng-container>
+      </tbody>
+    </table>
+    
+</div>

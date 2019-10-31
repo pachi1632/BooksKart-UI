@@ -1,0 +1,46 @@
+
+<div class="container" *ngIf="customer">
+customer{{customer.id}}
+    {{customer.id}}
+    <form #customerForm="ngForm" (ngSubmit)=addCustomer(customerForm.value)>
+    <div class="form-group">
+      <label>Customer Id</label>
+      <input type="text" class="form-control" [(ngModel)]="customer.customerid" name="customerid" disabled>
+    </div>
+    <div class="form-group">
+      <label>Customer Name</label>
+      <input type="text" class="form-control" [(ngModel)]="customer.name" name="name">
+    </div>
+    <div class="form-group">
+      <label>Books List</label>
+      <angular2-multiselect [data]="dropdownList" class="form-control" [(ngModel)]="customer.list" name="bookslist" [settings]="dropdownSettings"
+        (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)">
+      </angular2-multiselect>
+    </div>
+    <div class="form-group">
+      <label>Address</label>
+      <input type="text" class="form-control" [(ngModel)]="customer.address" name="address">
+    </div>
+    <button type="submit" class="btn btn-warning" >Submit</button>
+  </form>
+    <!-- <form [formGroup]="form">
+        <div class="form-group">
+          <label>Customer Id</label>
+          <input type="text" class="form-control" formControlName="customerid" placeholder="Enter Customer Id" >
+        </div>
+        <div class="form-group">
+            <label>Customer Name</label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter Customer Name">
+        </div>
+       <div class="form-group">
+              <label>Customer Address</label>
+              <input type="text" class="form-control" formControlName="address" placeholder="Enter Customer Address">
+        </div>
+        <div class="form-group">
+                <label>Books List</label>
+                <input type="text" class="form-control" formControlName="list" placeholder="Enter Books List">
+         </div>
+         <button class="btn btn-warning" [disabled]="form.invalid" (click)="onSubmit(form)" >Submit</button>
+          
+      </form> -->
+</div>

@@ -1,0 +1,51 @@
+
+<div *ngIf="books" class="container">
+  <div >
+      <img class="img-thumbnail ind-comp-img" src="{{imgurl}}">
+  </div>
+  
+  <form #bookForm="ngForm" (ngSubmit)="editBook(bookForm.value)">
+      <div class="form-group">
+        <label>Book Id</label>
+        <input type="text" class="form-control" [(ngModel)]="book.id" name="id" >
+      </div>
+      <div class="form-group">
+        <label>Book Name</label>
+        <input type="text" class="form-control" [(ngModel)]="book.name" name="name">
+      </div>
+       <div class="form-group">
+        <label>Released On</label>
+        <input type="text" class="form-control" [(ngModel)]="book.releasedOn" name="releasedon">
+      </div>
+      <div class="form-group">
+        <label>Author</label>
+        <angular2-multiselect [data]="dropdownList" class="form-control" [(ngModel)]="book.bookslist" name="author" [settings]="dropdownSettings"
+          (onSelect)="onItemSelect($event)" (onDeSelect)="OnItemDeSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeSelectAll($event)">
+        </angular2-multiselect>
+        <!-- <input type="text" class="form-control" [(ngModel)]="book.profession" name="profession"> -->
+      </div>
+      <button type="submit" class="btn btn-warning" [disabled]="form.invalid">Submit</button>
+    </form>
+  <!-- <form [formGroup]="form">
+    <div class="form-group">
+      <label>Book Id</label>
+      <input type="text" class="form-control" formControlName="id">
+    </div>
+    <div class="form-group">
+        <label>Book Name</label>
+        <input type="text" class="form-control" formControlName="name">
+    </div>
+   <div class="form-group">
+          <label>Released on</label>
+          <input type="text" class="form-control" formControlName="releasedOn">
+    </div>
+    <div class="form-group">
+            <label>Author Id</label>
+            <input type="text" class="form-control" formControlName="authorId">
+     </div>
+     <button class="btn btn-warning" (click)="onSubmit(form)" >Submit</button>
+      
+  </form> -->
+  
+</div>
+

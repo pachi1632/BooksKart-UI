@@ -1,0 +1,26 @@
+[
+        {
+            "id":"1",
+            "name":"Brian Christian",
+            "address":"8665 NW 2nd Ter Miami, FL 33126-8311,PO Box 520072 Miami, FL 33152-0072,5217 5th St Port Arthur, TX 77642-1112,PO Box 520072 , FL",
+            "bookslist":"Algorithms To Live By,The Most Human Human",
+            "profession":"poet",
+            "imageurl":"assets/brian_christian.jpg"
+        },
+        {
+            "id":"2",
+            "name":"Joseph Campbell",
+            "address":"8665 NW 2nd Ter Miami, FL 33126-8311,PO Box 520072 Miami, FL 33152-0072,5217 5th St Port Arthur, TX 77642-1112,PO Box 520072 , FL ",
+            "bookslist":"The power of Myth",
+            "profession":"poet",
+            "imageurl":"assets/joseph-campbell.jpg"
+        },
+        {
+            "id":"3",
+            "name":"Herman Melville",
+            "address":"8665 NW 2nd Ter Miami, FL 33126-8311,PO Box 520072 Miami, FL 33152-0072,5217 5th St Port Arthur, TX 77642-1112,PO Box 520072 , FL",
+            "bookslist":"Moby Dick",
+            "profession":"poet",
+            "imageurl":"assets/herman-melville.jpg"
+        }
+]
